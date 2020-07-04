@@ -1,0 +1,20 @@
+{
+  "name": "pokemon",
+  "version": "1.0.0",
+  "description": "application using the poke-api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pxd3v/pokemon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pxd3v/pokemon/issues"
+  },
+  "homepage": "https://github.com/pxd3v/pokemon#readme"
+}
