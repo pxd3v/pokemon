@@ -19,6 +19,31 @@ class PokemonControllerValidator {
         next();
     }
 
+    async validateShow (req, res, next) {
+        
+        const { name } = req.params
+
+        const pokemon = await knex('pokemons').where('name', name).orWhere('pokedexNumber', name).select('*');
+
+        if(pokemon.length == 0) {
+
+            return res.json("This pokemon is not already on our database.");
+        }
+        next();
+    }
+
+    async validateDelete (req, res, next) {
+        
+        const { name } = req.body
+
+        const pokemon = await knex('pokemons').where('name', name).orWhere('pokedexNumber', name).select('*');
+
+        if(pokemon.length == 0) {
+            
+            return res.json("This pokemon is not already on our database.");
+        }
+        next();
+    }
     
 }
 

@@ -50,11 +50,11 @@ class PokemonController {
 
 	async delete(req, res)  {
 		
-		const { name } = req.params;
+		const { name } = req.body;
 
-		await knex('pokemons').where('name', name).del();
+		await knex('pokemons').where('name', name).orWhere('pokedexNumber', name).del();
 
-		return res.json({ message: 'Pokemon delected'})
+		return res.json({ message: 'Pokemon deleted'})
 
 	}
 
