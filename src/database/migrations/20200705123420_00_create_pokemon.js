@@ -9,6 +9,7 @@ exports.up = function(knex) {
         table.string('backImage').notNullable();
         table.string('type').notNullable();
         table.string('move').notNullable();
+        table.string('pokedexNumber').notNullable();
     });
 };
 

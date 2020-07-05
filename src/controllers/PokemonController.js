@@ -1,11 +1,10 @@
 import api from '../api/api';
 import knex from '../database/connection';
-import { response } from 'express';
 
 class PokemonController {
 	
 	async create(req, res)  {
-		const { name } = req.params;
+		const { name } = req.body;
 		const { data } = await api.get(`/${name}`);
 
         const pokemon = await knex('pokemons').insert({
@@ -16,6 +15,7 @@ class PokemonController {
 			backImage: data.sprites.back_default,
 			type: data.types.map(t => t.type.name)[0],
 			move: data.moves.map(m => m.move.name)[0],
+			pokedexNumber: data.id
 		})
 
 		return res.json({
@@ -26,6 +26,7 @@ class PokemonController {
 			backImage: data.sprites.back_default,
 			type: data.types.map(t => t.type.name)[0],
 			move: data.moves.map(m => m.move.name)[0],
+			pokedexNumber: data.id
 		});
 	}
 
