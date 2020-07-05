@@ -25,12 +25,14 @@ routes.get('/pokemon',pokemonController.index);
 routes.get('/pokemon/:name', pokemonControllerValidator.validateShow, pokemonController.show);
 
 routes.delete('/pokemon',
-celebrate({
-    body: Joi.object().keys({
-        name: Joi.string().required(),
-    })
-}),
-pokemonControllerValidator.validateDelete, pokemonController.delete);
+    celebrate({
+        body: Joi.object().keys({
+            name: Joi.string().required(),
+        })
+    }),
+    pokemonControllerValidator.validateDelete, 
+    pokemonController.delete
+);
 
 routes.post('/seedpokemons',
     seedPokemonsController.create
