@@ -3,9 +3,9 @@ const path = require('path');
 module.exports = {
     client: 'pg',
     connection: {
-        host: "192.168.99.100",
+        host: process.env.DB_DOM,
         user: "postgres",
-        password: "pokemon",
+        password: process.env.DB_PASSWORD,
         database: "pokemon"
     },
     migrations: {
