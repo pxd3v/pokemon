@@ -1,11 +1,12 @@
 import express from 'express';
 import PokemonController from './controllers/PokemonController';
 import PokemonControllerValidator from './controllers/PokemonControllerValidator';
-
+import SeedPokemonsController from './controllers/SeedPokemonsController';
 import { celebrate, Joi } from 'celebrate';
 
 const pokemonController = new PokemonController();
 const pokemonControllerValidator = new PokemonControllerValidator();
+const seedPokemonsController = new SeedPokemonsController();
 const routes = express.Router();
 
 
@@ -30,5 +31,9 @@ celebrate({
     })
 }),
 pokemonControllerValidator.validateDelete, pokemonController.delete);
+
+routes.post('/seedpokemons',
+    seedPokemonsController.create
+)
 
 export default routes;
