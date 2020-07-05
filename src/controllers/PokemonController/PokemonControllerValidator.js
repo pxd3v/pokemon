@@ -1,5 +1,5 @@
-import api from '../api/api';
-import knex from '../database/connection';
+import api from '../../api/api';
+import knex from '../../database/connection';
 
 class PokemonControllerValidator {
     async validateCreate(req, res, next) {
