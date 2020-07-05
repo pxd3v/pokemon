@@ -1,2 +1,2 @@
 # pokemon
- application using the poke-api
+recreating poke api
