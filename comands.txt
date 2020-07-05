@@ -1,2 +1,2 @@
-npx sequelize migration:create --name=create-user
-
+npm run knex:migrate
+npm knex migrate:make nome_Da_migration
