@@ -1,5 +1,6 @@
 import knex from 'knex';
 import path from 'path';
+require('dotenv').config();
 
 const connection = knex({
     client: 'pg',

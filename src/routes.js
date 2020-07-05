@@ -1,11 +1,18 @@
 import express from 'express';
 import PokemonController from './controllers/PokemonController';
-
+import { celebrate, Joi } from 'celebrate';
 const pokemonController = new PokemonController();
 const routes = express.Router();
 
 
-routes.post('/pokemon/:name', pokemonController.create);
+routes.post('/pokemon/:name', 
+    celebrate({
+        params: Joi.object().keys({
+            name: Joi.string().required(),
+        })
+    }),
+    pokemonController.create
+);
 
 routes.get('/pokemon', pokemonController.index);
 
