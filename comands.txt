@@ -1,0 +1,2 @@
+npx sequelize migration:create --name=create-user
+
