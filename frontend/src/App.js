@@ -1,8 +1,13 @@
 import React from 'react';
+import './App.css';
 
 function App() {
   return (
-    <h1>Teste</h1>
+    <div className="App">
+      <header className="App-header">
+        <div>a</div>      
+      </header>
+    </div>
   );
 }
 
