@@ -18,14 +18,17 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
         {pokemons.map(p => 
-        <Card 
-          name={p.name} 
-          pokemonImageUrl={p.frontImage}
-          typeImageUrl="https://cdn.pixabay.com/photo/2018/05/20/01/41/pokemon-3414810_960_720.png"
-          pokedexNumber={p.pokedexNumber}
-        />)}
+        <div style={{alignItems: 'center', marginTop: 20}}>
+          <Card 
+            name={p.name} 
+            pokemonImageUrl={p.frontImage}
+            typeImageUrl="https://cdn.pixabay.com/photo/2018/05/20/01/41/pokemon-3414810_960_720.png"
+            pokedexNumber={p.pokedexNumber}
+          />
+        </div>  
+        )}
     </div>
   );
 }
