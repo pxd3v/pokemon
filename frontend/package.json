@@ -2,7 +2,6 @@
   "name": "pokemon",
   "version": "0.1.0",
   "private": true,
-  "proxy": "localhost:3333",
   "dependencies": {
     "@material-ui/styles": "^4.10.0",
     "@testing-library/jest-dom": "^4.2.4",
