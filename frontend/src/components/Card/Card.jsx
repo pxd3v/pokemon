@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles({
     cardContainer: {
-        backgroundColor: "antiquewhite",
+        backgroundColor: 'antiquewhite',
         display: 'flex',
         flexDirection: 'column',
         padding: 16,
@@ -26,7 +27,7 @@ const useStyles = makeStyles({
         height: 30
     },
     pokemonImageContainer: {
-        backgroundColor: "aliceblue",
+        backgroundColor: 'aliceblue',
         marginTop: 8,
         borderRadius: 10,
     },
@@ -44,7 +45,7 @@ const useStyles = makeStyles({
     pokedexNumber: {
 
     },
-})
+});
 const Card = ({ name, pokemonImageUrl, pokedexNumber, typeImageUrl }) => {
 
     const classes = useStyles();
@@ -62,7 +63,7 @@ const Card = ({ name, pokemonImageUrl, pokedexNumber, typeImageUrl }) => {
                 <img className={classes.pokemonImage} src={pokemonImageUrl}></img>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Card;
