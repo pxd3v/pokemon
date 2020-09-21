@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
 import { getPokemons } from './services';
 import { Card } from './components/Card';
 
@@ -18,17 +17,19 @@ function App() {
     }, []);
 
     return (
-        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-            {pokemons.map(p => 
-                <div style={{alignItems: 'center', marginTop: 20}}>
-                    <Card 
-                        name={p.name} 
-                        pokemonImageUrl={p.frontImage}
-                        typeImageUrl="https://cdn.pixabay.com/photo/2018/05/20/01/41/pokemon-3414810_960_720.png"
-                        pokedexNumber={p.pokedexNumber}
-                    />
-                </div>  
-            )}
+        <div className="container mx-auto flex flex-col items-center font-sans text-lg font-medium">
+            <ul className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 py-6">
+                {pokemons.map(p => 
+                    <li>
+                        <Card
+                            name={p.name} 
+                            pokemonImageUrl={p.frontImage}
+                            typeImageUrl="https://cdn.pixabay.com/photo/2018/05/20/01/41/pokemon-3414810_960_720.png"
+                            pokedexNumber={p.pokedexNumber}
+                            />
+                    </li>  
+                )}
+            </ul>
         </div>
     );
 }

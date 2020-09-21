@@ -5,10 +5,11 @@ require('dotenv').config();
 const connection = knex({
     client: 'pg',
     connection: {
-        host: process.env.DB_DOM,
+        host: "172.17.0.1",
         user: "postgres",
-        password: process.env.DB_PASSWORD,
-        database: "pokemon"
+        password: "pokemon",
+        database: "pokemon",
+        port: "32768"
     },
     useNullAsDefault: true,
 })

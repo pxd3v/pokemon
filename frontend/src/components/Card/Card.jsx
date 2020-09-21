@@ -48,19 +48,17 @@ const useStyles = makeStyles({
 });
 const Card = ({ name, pokemonImageUrl, pokedexNumber, typeImageUrl }) => {
 
-    const classes = useStyles();
-
     return (
-        <div className={classes.cardContainer}>
-            <div className={classes.headerContainer}>
-                <span className={classes.name}>{name}</span>
-                <div className={classes.pokedexNumberContainer}>
-                    <span className={classes.pokedexNumber}>{pokedexNumber}</span>
+        <div className="flex flex-col justify-center items-center bg-red-100 rounded">
+            <div className="container mx-auto flex bg-red-500 p-2 items-center rounded">
+                <span className="flex-1 text-white">{name}</span>
+                <div className="mx-3 px-2 bg-yellow-600 text-white rounded-full w-8 flex justify-center items-center font-mono font-extrabold ">
+                    <span>{pokedexNumber}</span>
                 </div>
-                <img className={classes.typeImage} src={typeImageUrl}></img>
+                <img className="w-8" src={typeImageUrl}></img>
             </div>
-            <div className={classes.pokemonImageContainer}>
-                <img className={classes.pokemonImage} src={pokemonImageUrl}></img>
+            <div>
+                <img className="w-64" src={pokemonImageUrl}></img>
             </div>
         </div>
     );
