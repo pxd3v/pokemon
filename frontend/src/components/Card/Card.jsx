@@ -49,7 +49,7 @@ const useStyles = makeStyles({
 const Card = ({ name, pokemonImageUrl, pokedexNumber, typeImageUrl }) => {
 
     return (
-        <div className="flex flex-col justify-center items-center bg-red-100 rounded">
+        <div className="flex flex-col justify-center items-center bg-red-100 rounded shadow-md hover:shadow-xl transform hover:-translate-y-3" >
             <div className="container mx-auto flex bg-red-500 p-2 items-center rounded">
                 <span className="flex-1 text-white">{name}</span>
                 <div className="mx-3 px-2 bg-yellow-600 text-white rounded-full w-8 flex justify-center items-center font-mono font-extrabold ">
