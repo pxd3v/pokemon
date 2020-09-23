@@ -10,7 +10,7 @@ const FilterBar = ({ types, setTypes }) => {
         }));
     };
     return (
-        <ul className="border-yellow-500 border-2 rounded-lg p-2 bg-red-100 grid grid-cols-9 w-full gap-2">
+        <ul className="border-yellow-500 border-2 rounded-lg p-2 bg-red-100 grid lg:grid-cols-9 md:grid-cols-6 sm:grid-cols-3 w-full gap-2">
             {types.map(t => (
                 <li
                     className={t.active ? "border-yellow-600 bg-yellow-300 border rounded-lg" : "border-yellow-600 bg-yellow-400 border rounded-lg"}
@@ -21,7 +21,7 @@ const FilterBar = ({ types, setTypes }) => {
                         onClick={() => toggleIsActivatedType(t)}
                     >
                         <div className="flex-1">{t.name}</div>
-                        <img className="w-8 h-8 ml-2"src={t.imageUrl} />
+                        <img className="w-8 h-8 ml-2"src={t.imageUrl} alt={`${t.name} logo`}/>
                     </button>
                 </li>
             ))}

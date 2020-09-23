@@ -18,7 +18,7 @@ const Card = ({ name, pokemonImageUrl, pokedexNumber, typeImageUrl }) => {
                 <img className="w-8" src={typeImageUrl}></img>
             </div>
             <div>
-                <img className="w-64 h-64 object-cover" src={pokemonImageUrl}></img>
+                <img className="w-64 h-64 object-cover" src={pokemonImageUrl} alt={`${name} picture`}></img>
             </div>
         </div>
     );
