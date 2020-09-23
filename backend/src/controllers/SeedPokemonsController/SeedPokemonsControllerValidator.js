@@ -12,10 +12,6 @@ class SeedPokemonsControllerValidator {
         if(max < 1) {
             return res.json("Minimum: 1");
         }
-
-        if( max > 150) {   
-            return res.json("Maximum allowed is 150 pokemons.!");
-        }
         next();
     }
 }

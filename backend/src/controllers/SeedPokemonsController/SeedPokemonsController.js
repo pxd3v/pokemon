@@ -18,6 +18,7 @@ class SeedPokemonController {
                 move: data.moves.map(m => m.move.name)[0],
                 pokedexNumber: data.id
             }
+            console.log(pokemon);
             pokemons.push(pokemon);
         }
         await knex('pokemons').insert(pokemons);

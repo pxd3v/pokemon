@@ -7,7 +7,7 @@ module.exports = {
         host: "172.17.0.1",
         user: "postgres",
         password: "pokemon",
-        database: "pokemon",
+        database: "pokemon2",
         port: "32768"
     },
     migrations: {
