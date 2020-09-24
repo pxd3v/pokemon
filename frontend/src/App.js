@@ -95,7 +95,7 @@ function App() {
                     :
                     <ul className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 py-6">
                     {pokemons.map(p => 
-                        <li>
+                        <li key={p.pokedexNumber.toString()}>
                             <Card
                                 name={p.name} 
                                 pokemonImageUrl={p.frontImage}
